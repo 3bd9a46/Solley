@@ -1,0 +1,259 @@
+:root {
+  --bg: #0a0a12;
+  --panel: #121226;
+  --text: #f1f5ff;
+  --muted: #b5bbd3;
+  --accent: #8b5cf6;
+  --accent-2: #06b6d4;
+  --border: #2b2d4a;
+  --shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Tajawal", "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 10%, #1b1f4f, transparent 35%),
+    radial-gradient(circle at 80% 15%, #1e415a, transparent 30%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.1));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 18, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 5;
+}
+
+.header-inner {
+  padding: 0.9rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.section {
+  padding: 4rem 0 3rem;
+}
+
+.hero {
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+}
+
+.hero-inner {
+  text-align: center;
+  max-width: 780px;
+  animation: fade-up 700ms ease-out;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  margin-bottom: 0.7rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1.2rem;
+}
+
+.hero-sub {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.primary-btn,
+.ghost-btn {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.primary-btn {
+  color: white;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  box-shadow: var(--shadow);
+}
+
+.ghost-btn {
+  color: var(--text);
+  background: transparent;
+  border-color: var(--border);
+}
+
+.primary-btn:hover,
+.ghost-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card,
+.quote,
+.mini-card,
+.faq-list details {
+  background: rgba(18, 18, 38, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.service-card {
+  animation: fade-up 700ms ease-out;
+}
+
+.service-card ul {
+  padding-inline-start: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.service-actions {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.steps {
+  display: grid;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.testimonials-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quote {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faq-list p {
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+}
+
+.trust {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[dir="ltr"] body,
+body[dir="ltr"] {
+  font-family: "Inter", "Tajawal", system-ui, sans-serif;
+}
+
+@media (max-width: 900px) {
+  .cards-grid,
+  .mini-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3.2rem 0 2.5rem;
+  }
+}
