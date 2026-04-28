@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solley | طلب متابعين وتفاعل</title>
+    <meta
+      name="description"
+      content="Solley - اختر المنصة والخدمة والعدد، ثم اطلب مباشرة عبر واتساب."
+    />
+    <meta property="og:title" content="Solley | طلب متابعين وتفاعل" />
+    <meta property="og:description" content="اختر الخدمة والعدد، واحصل على سعر فوري مع خصم تلقائي ثم أرسل الطلب عبر واتساب." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_DZ" />
+    <meta name="theme-color" content="#0a0a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo">Solley</a>
+        <div class="header-actions">
+          <button id="langToggle" class="ghost-btn" type="button" aria-label="Change language">EN</button>
+          <a href="#services" class="primary-btn" data-i18n="header.order">اطلب الآن</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-inner">
+          <p class="badge" data-i18n="hero.discount">🔥 خصم يبدأ من 5% عند 2000 ويصل حتى 25%</p>
+          <h1 data-i18n="hero.title">اختَر المنصة والخدمة والعدد واطلب فورًا</h1>
+          <p class="hero-sub" data-i18n="hero.subtitle">
+            عند الضغط على الطلب، يتم فتح واتساب مباشرة مع رسالة جاهزة فيها تفاصيل الطلب والسعر.
+          </p>
+          <div class="hero-cta">
+            <a href="#services" class="primary-btn" data-i18n="hero.cta">ابدأ الآن</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <h2 data-i18n="services.title">اختر الخدمة</h2>
+          <p class="section-sub" data-i18n="services.subtitle">منصة واضحة + سعر مباشر + طلب سريع عبر واتساب.</p>
+          <div class="cards-grid">
+            <article class="service-card order-card" data-platform="TikTok">
+              <h3>TikTok</h3>
+              <label class="field-label" for="tiktok-service" data-i18n="form.service">نوع الخدمة</label>
+              <select id="tiktok-service" class="service-type">
+                <option value="followers" data-i18n="common.followers">متابعين</option>
+                <option value="likes" data-i18n="common.likes">إعجابات</option>
+                <option value="views" data-i18n="common.views">مشاهدات</option>
+              </select>
+
+              <label class="field-label" for="tiktok-qty" data-i18n="form.quantity">العدد</label>
+              <input id="tiktok-qty" class="quantity-input" type="number" min="1" max="1000000" step="1" value="1000" />
+
+              <div class="quick-qty" role="group" aria-label="Quick quantity presets">
+                <button class="quick-btn" type="button" data-qty="1000">1000</button>
+                <button class="quick-btn" type="button" data-qty="2000">2000</button>
+                <button class="quick-btn" type="button" data-qty="5000">5000</button>
+                <button class="quick-btn" type="button" data-qty="10000">10000</button>
+              </div>
+
+              <p class="price"><span data-i18n="form.price">السعر بعد التخفيض</span>: <strong class="price-value">500 DA</strong></p>
+              <p class="discount-line"></p>
+              <div class="order-summary"></div>
+              <button class="primary-btn order-submit" type="button" data-i18n="header.order" aria-label="Order TikTok service now">اطلب الآن</button>
+            </article>
+
+            <article class="service-card order-card" data-platform="Instagram">
+              <h3>Instagram</h3>
+              <label class="field-label" for="instagram-service" data-i18n="form.service">نوع الخدمة</label>
+              <select id="instagram-service" class="service-type">
+                <option value="followers" data-i18n="common.followers">متابعين</option>
+                <option value="likes" data-i18n="common.likes">إعجابات</option>
+                <option value="views" data-i18n="common.views">مشاهدات</option>
+              </select>
+
+              <label class="field-label" for="instagram-qty" data-i18n="form.quantity">العدد</label>
+              <input id="instagram-qty" class="quantity-input" type="number" min="1" max="1000000" step="1" value="1000" />
+
+              <div class="quick-qty" role="group" aria-label="Quick quantity presets">
+                <button class="quick-btn" type="button" data-qty="1000">1000</button>
+                <button class="quick-btn" type="button" data-qty="2000">2000</button>
+                <button class="quick-btn" type="button" data-qty="5000">5000</button>
+                <button class="quick-btn" type="button" data-qty="10000">10000</button>
+              </div>
+
+              <p class="price"><span data-i18n="form.price">السعر بعد التخفيض</span>: <strong class="price-value">500 DA</strong></p>
+              <p class="discount-line"></p>
+              <div class="order-summary"></div>
+              <button class="primary-btn order-submit" type="button" data-i18n="header.order" aria-label="Order Instagram service now">اطلب الآن</button>
+            </article>
+
+            <article class="service-card order-card" data-platform="Facebook">
+              <h3>Facebook</h3>
+              <label class="field-label" for="facebook-service" data-i18n="form.service">نوع الخدمة</label>
+              <select id="facebook-service" class="service-type">
+                <option value="followers" data-i18n="common.followers">متابعين</option>
+                <option value="likes" data-i18n="common.likes">إعجابات</option>
+              </select>
+
+              <label class="field-label" for="facebook-qty" data-i18n="form.quantity">العدد</label>
+              <input id="facebook-qty" class="quantity-input" type="number" min="1" max="1000000" step="1" value="1000" />
+
+              <div class="quick-qty" role="group" aria-label="Quick quantity presets">
+                <button class="quick-btn" type="button" data-qty="1000">1000</button>
+                <button class="quick-btn" type="button" data-qty="2000">2000</button>
+                <button class="quick-btn" type="button" data-qty="5000">5000</button>
+                <button class="quick-btn" type="button" data-qty="10000">10000</button>
+              </div>
+
+              <p class="price"><span data-i18n="form.price">السعر بعد التخفيض</span>: <strong class="price-value">500 DA</strong></p>
+              <p class="discount-line"></p>
+              <div class="order-summary"></div>
+              <button class="primary-btn order-submit" type="button" data-i18n="header.order" aria-label="Order Facebook service now">اطلب الآن</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container">
+          <h2 data-i18n="why.title">لماذا Solley؟</h2>
+          <div class="mini-grid">
+            <div class="mini-card" data-i18n="why.fast">تنفيذ سريع خلال وقت قصير ⚡</div>
+            <div class="mini-card" data-i18n="why.support">دعم مباشر على واتساب 24/7 💬</div>
+            <div class="mini-card" data-i18n="why.safe">تعامل واضح وأسعار شفافة 🔒</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <h2 data-i18n="how.title">كيف يعمل الطلب</h2>
+          <ol class="steps">
+            <li data-i18n="how.step1">اختر المنصة (TikTok / Instagram / Facebook)</li>
+            <li data-i18n="how.step2">اختر نوع الخدمة والعدد</li>
+            <li data-i18n="how.step3">اضغط "اطلب الآن" لفتح واتساب برسالة جاهزة</li>
+          </ol>
+        </div>
+      </section>
+          <section class="section" id="faq">
+        <div class="container">
+          <h2 data-i18n="faq.title">أسئلة سريعة</h2>
+          <div class="faq-list">
+            <details><summary data-i18n="faq.q1">كيف أطلب؟</summary><p data-i18n="faq.a1">اختر المنصة والخدمة والعدد ثم اضغط اطلب الآن.</p></details>
+            <details><summary data-i18n="faq.q2">هل السعر يظهر قبل الإرسال؟</summary><p data-i18n="faq.a2">نعم، يظهر السعر قبل الخصم وبعد الخصم مباشرة.</p></details>
+            <details><summary data-i18n="faq.q3">أين يصل الطلب؟</summary><p data-i18n="faq.a3">يفتح واتساب تلقائيًا على رقم الخدمة مع رسالة جاهزة.</p></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container trust">
+        <p data-i18n="trust.g1">خدمة مضمونة 100%</p>
+        <p data-i18n="trust.g2">تسليم سريع</p>
+        <p data-i18n="trust.g3">دعم متواصل</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
